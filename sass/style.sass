@@ -1,0 +1,169 @@
+@font-face
+    font-family: 'Gilroy'
+    src: url('Gilroy-Regular.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+@font-face
+    font-family: 'Gilroy'
+    src: url('Gilroy-Medium.ttf') format('truetype')
+    font-weight: 500
+    font-style: normal
+
+body
+    font-family: 'Gilroy'
+    font-weight: 400
+
+a
+    display: inline-block
+
+.container
+    max-width: 1200px
+    width: 100%
+    padding: 0 15px
+    margin: 0 auto
+
+.btn
+    font-size: 18px
+    line-height: 23px
+    color: #FE5C2D
+    border: 1px solid #6C6C72
+    padding: 13px 46px 11px
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    transition: all .3s
+    svg
+        margin-left: 10px
+    svg path
+        transform: fill .3s
+    &:hover
+        background-color: #FE5C2D
+        color: #fff
+        border-color: #FE5C2D
+        svg path
+            fill: #fff
+
+.main-slider
+    position: relative
+    &-btn
+        position: absolute
+        right: 0
+        bottom: 0
+    .slick-arrow
+        position: absolute
+        background-color: transparent
+        border: none
+        padding: 0
+        cursor: pointer
+        transition: transform .3s
+        svg rect
+            transition: stroke .3s
+    .slick-arrow:hover svg rect
+        stroke: #000
+    .slick-arrow:active
+        transform: translateY(2px)
+
+.slider-nav
+    display: flex
+    position: absolute
+    top: 0
+    right: 88px
+    width: 183px
+    .slick-next
+        right: 0
+    .slick-prev
+        left: 0
+
+.custom-paging
+    color: #6C6C72
+    .slick-dots
+        list-style: none
+        pointer-events: none
+        margin: 0
+    .slick-dots li
+        position: absolute
+        opacity: 0
+        padding-left: 20px
+    .slick-dots li.slick-active
+        opacity: 1
+
+.slider-count
+    font-size: 16px
+    line-height: 21px
+    &.active
+        color: #252323
+        font-size: 25px
+        line-height: 32px
+
+.auto-item
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    &__img
+        max-width: 870px
+        width: 100%
+        max-height: 445px
+        height: 100%
+        img
+            width: 100%
+            height: 100%
+    &__content
+        max-width: 270px
+        width: 100%
+        margin-left: 30px
+    &__title
+        font-weight: 500
+        font-size: 25px
+        line-height: 32px
+        color: #252323
+        margin-top: 62px
+        margin-bottom: 8px
+    &__text
+        font-size: 16px
+        line-height: 21px
+        color: #6C6C72
+
+@media screen and ( max-width: 992px )
+    .main-slider-btn
+        position: initial
+
+    .main-slider
+        .slick-arrow
+            position: initial
+
+    .auto-item
+        flex-direction: column
+        &__img
+            max-width: 100%
+            width: 100%
+            max-height: 100%
+            margin-bottom: 20px
+        &__content
+            display: flex
+            justify-content: space-between
+            margin-left: 0
+            margin-bottom: 30px
+            max-width: 100%
+        &__title
+            margin-top: 0
+            margin-bottom: 8px
+            font-size: 25px
+            line-height: 32px
+        &__text
+            font-size: 16px
+            line-height: 21px
+    .slider-nav
+        position: initial
+        top: initial
+        right: initial
+        bottom: initial
+        width: 80px
+        height: 30px
+        justify-content: flex-end
+        margin: 0
+        .slick-prev
+            left: initial
+            margin-right: 20px
+        .slick-next
+            right: initial
