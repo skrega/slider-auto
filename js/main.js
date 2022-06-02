@@ -7,7 +7,7 @@ $(function () {
         appendArrows: $(".custom-arrows"),
         fade: true,
         infinite: true,
-        speed: 1000,
+        speed: 500,
         autoplay: false,
         autoplaySpeed: 5000,
         dots: true,
